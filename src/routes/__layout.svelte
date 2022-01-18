@@ -1,16 +1,9 @@
 <script>
 	import '../app.css';
-	import Header from '../components/Header.svelte';
-	import ViewHandler from '../components/ViewHandler.svelte';
-	import {CurrentTab} from '$lib/store';
-
-	let currenttab;
-	CurrentTab.subscribe(value => {
-		currenttab = value
-	})
+	import Header from '$lib/components/layout/Header.svelte';
 </script>
 
-<Header />
-<!-- {#if}
-{/if} -->
-<slot />
+<div class="w-screen min-w-screen max-w-screen h-screen min-h-screen max-h-screen overflow-hidden">
+	<Header />
+	<slot/>
+</div>

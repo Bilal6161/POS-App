@@ -7,11 +7,15 @@ const config = {
 		extend: {}
 	},
 
-	plugins: [require('daisyui')],
+	plugins: [require('daisyui'),require('tailwind-scrollbar')],
 	daisyui: {
 		themes: [
 			'light' // first one will be the default theme
-		]
+		],
+		variants: {
+			// ...
+			scrollbar: ['dark']
+		}
 	}
 };
 
